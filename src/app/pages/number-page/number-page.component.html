@@ -1,0 +1,36 @@
+<section class="mx-2 mb-5">
+  <h1 class="text-2xl font-bold">Pipes Numéricos</h1>
+  <h3 class="text-xl font-thin">Pipes incluidos en Angular</h3>
+</section>
+<div class="stats shadow w-full stats-vertical border md:stats-horizontal">
+  <div class="stat place-items-center">
+    <div class="stat-title">Number</div>
+    <div class="stat-value text-secondary">
+      {{ totalSells() | number : "1.2-2" }}
+    </div>
+    <div class="stat-desc">{{ totalSells() }}</div>
+  </div>
+
+  <div class="stat place-items-center">
+    <div class="stat-title">Number</div>
+    <div class="stat-value text-secondary">
+      {{ totalSells() + 1234 | number : "1.1-2" }}
+    </div>
+    <div class="stat-desc">{{ totalSells() }}</div>
+  </div>
+
+  <div class="stat place-items-center">
+    <div class="stat-title">Currency</div>
+    <div class="stat-value text-secondary">
+      {{ totalSells() | currency : "CAD" : "symbol-narrow" : "1.1-2" }}
+    </div>
+    <div class="stat-desc">{{ totalSells() }}</div>
+  </div>
+  <div class="stat place-items-center">
+    <div class="stat-title">Percent</div>
+    <div class="stat-value text-secondary">
+      {{ percent() | percent : "1.2" }}
+    </div>
+    <div class="stat-desc">{{ percent() }}</div>
+  </div>
+</div>
